@@ -20,7 +20,7 @@ mongoose
     console.log(err);
   });
 const corsOptions = {
-  origin: "https://adoring-yalow-d2cad9.netlify.app/",
+  origin: "*",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
