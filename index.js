@@ -19,7 +19,13 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-app.use(cors());
+const corsOptions = {
+  origin: "https://adoring-yalow-d2cad9.netlify.app/",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
