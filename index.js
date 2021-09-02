@@ -21,7 +21,7 @@ mongoose
   });
 const corsOptions = {
   origin:
-    "https://netflixfrontend-4c1f8.web.app/register",
+    "https://netflixfrontend-4c1f8.web.app/,http://localhost:4200/",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
