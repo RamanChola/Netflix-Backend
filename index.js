@@ -20,8 +20,7 @@ mongoose
     console.log(err);
   });
 const corsOptions = {
-  origin:
-    "https://netflixfrontend-4c1f8.web.app/,http://localhost:4200/",
+  origin: "https://netflixfrontend-4c1f8.web.app/,http://localhost:4200/",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
@@ -32,7 +31,9 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
-
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 app.listen(process.env.PORT || 8800, () => {
   console.log("Backend listening on 8800");
 });
