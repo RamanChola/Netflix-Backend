@@ -20,7 +20,8 @@ mongoose
     console.log(err);
   });
 const corsOptions = {
-  origin: "*",
+  origin:
+    "netflixfrontend-4c1f8.web.app,netflixfrontend-4c1f8.firebaseapp.com,https://sad-ardinghelli-a2c7cb.netlify.app",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
